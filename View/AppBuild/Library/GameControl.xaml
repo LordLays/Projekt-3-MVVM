@@ -1,0 +1,25 @@
+﻿<UserControl
+    x:Class="KregulecApp.View.AppBuild.Library.GameControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:KregulecApp.View.AppBuild.Library"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Grid>
+        <controls:DataGrid HorizontalAlignment="Center" ItemsSource="{Binding GameCatalogs}" AutoGenerateColumns="False">
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn Header="Tytuł" Binding="{Binding Title}" />
+                <controls:DataGridTextColumn Header="Wydawca" Binding="{Binding Publisher}" />
+                <controls:DataGridTextColumn Header="Data wydania" Binding="{Binding ReleaseDate}" />
+                <controls:DataGridTextColumn Header="Liczba graczy" Binding="{Binding Players}" />
+                <controls:DataGridTextColumn Header="Czas gry" Binding="{Binding PlayTime}" />
+                <controls:DataGridTextColumn Header="Wiek" Binding="{Binding Age}" />
+                <controls:DataGridTextColumn Header="Język" Binding="{Binding Language}" />
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+    </Grid>
+</UserControl>

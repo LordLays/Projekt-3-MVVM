@@ -1,0 +1,104 @@
+﻿<UserControl
+    x:Class="KregulecApp.View.AppBuild.Components.Forms.GameForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:KregulecApp.View.AppBuild.Components.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    mc:Ignorable="d">
+    <Grid Margin="15,0,15,15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock VerticalAlignment="Center">Tytuł</TextBlock>
+        <TextBox
+            Grid.Row="0"
+            Grid.Column="1"
+            MaxHeight="25"
+            Text="{Binding Title}" />
+
+        <TextBlock Grid.Row="1" VerticalAlignment="Center">Wydawca</TextBlock>
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="1"
+            MaxHeight="25"
+            Text="{Binding Publisher}" />
+
+        <TextBlock Grid.Row="2" VerticalAlignment="Center">Data wydania</TextBlock>
+        <DatePicker
+            Grid.Row="2"
+            Grid.Column="1"
+            MaxHeight="25"
+            SelectedDate="{Binding ReleaseDate}" />
+
+        <TextBlock Grid.Row="3" VerticalAlignment="Center">Ilość Gracz</TextBlock>
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="1"
+            MaxHeight="25"
+            Text="{Binding Players}" />
+
+        <TextBlock Grid.Row="4" VerticalAlignment="Center">Czas gry</TextBlock>
+        <xctk:TimePicker
+            Grid.Row="4"
+            Grid.Column="1"
+            MaxHeight="25"
+            Text="{Binding PlayTime}" />
+
+
+        <TextBlock Grid.Row="5" VerticalAlignment="Center">Wiek</TextBlock>
+        <TextBox
+            Grid.Row="5"
+            Grid.Column="1"
+            MaxHeight="25"
+            Text="{Binding Age}" />
+
+        <TextBlock Grid.Row="6" VerticalAlignment="Center">Język</TextBlock>
+        <TextBox
+            Grid.Row="6"
+            Grid.Column="1"
+            MaxHeight="25"
+            Text="{Binding Language}" />
+        <StackPanel
+            Grid.Row="7"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal"
+            Style="{StaticResource ContentMenuStyle}">
+            <Button
+                Command="{Binding AddGameCommand}"
+                Content="Dodaj"
+                Style="{DynamicResource NormalMainButton}" />
+            <StackPanel>
+                <Label Content="Cel do Zamiany" />
+                <TextBox MaxHeight="25" Text="{Binding UpdateTarget}" />
+            </StackPanel>
+            <Button
+                Command="{Binding UpdateGameCommand}"
+                Content="Zamien"
+                Style="{DynamicResource NormalMainButton}" />
+            <Button
+                Command="{Binding DeleteGameCommand}"
+                Content="Usun"
+                Style="{DynamicResource NormalMainButton}" />
+        </StackPanel>
+        <Label
+            Grid.Row="8"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Content="{Binding StatusMessage}" />
+    </Grid>
+</UserControl>

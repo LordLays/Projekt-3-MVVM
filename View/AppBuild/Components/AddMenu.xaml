@@ -1,0 +1,37 @@
+﻿<UserControl
+    x:Class="KregulecApp.View.AppBuild.Components.AddMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:KregulecApp.View.AppBuild.Components"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+        <Button
+            Width="200"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Center"
+            Command="{Binding showGameForm}"
+            Content="Planszówka"
+            Style="{DynamicResource NormalMainButton}" />
+        <Button
+            Width="200"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Center"
+            Content="Zbiór"
+            Style="{DynamicResource NormalMainButton}" />
+        <Button
+            Width="200"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Center"
+            Content="Konwent"
+            Style="{DynamicResource NormalMainButton}" />
+        <Button
+            Width="200"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Center"
+            Command="{Binding showTagForm}"
+            Content="Tag"
+            Style="{DynamicResource NormalMainButton}" />
+    </StackPanel>
+</UserControl>

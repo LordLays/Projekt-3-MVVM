@@ -1,0 +1,27 @@
+﻿<UserControl
+    x:Class="KregulecApp.View.AppBuild.Components.ContentMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:KregulecApp.View.AppBuild.Components"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <StackPanel
+        HorizontalAlignment="Center"
+        Cursor=""
+        Orientation="Horizontal"
+        Style="{StaticResource ContentMenuStyle}">
+        <Button
+            Command="{Binding showGameControl}"
+            Content="Biblioteczka"
+            Style="{DynamicResource NormalMainButton}" />
+        <Button
+            Command="{Binding showTagControl}"
+            Content="Tagi"
+            Style="{DynamicResource NormalMainButton}" />
+        <Button
+            Command="{Binding showGameForm}"
+            Content="Dodaj"
+            Style="{DynamicResource NormalMainButton}" />
+    </StackPanel>
+</UserControl>
